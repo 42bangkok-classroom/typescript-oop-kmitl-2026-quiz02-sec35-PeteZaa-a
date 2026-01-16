@@ -36,6 +36,7 @@ async function getEdgePosts(): Promise<EdgePost[]> {
     return edgePosts
     
     
+    
   } catch (error) {
     throw new Error("Failed to fetch posts")
   }
