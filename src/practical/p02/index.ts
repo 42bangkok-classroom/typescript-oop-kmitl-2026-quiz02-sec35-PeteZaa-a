@@ -1,12 +1,12 @@
 import axios from "axios"
 
-export function getPostsByUser() {}
+// export function getPostsByUser() {}
 
 const url = "https://jsonplaceholder.typicode.com/posts"
 
 
 interface allData {
-  Userid: number
+  userId: number
   id: number
   title: string
   body: string
@@ -21,11 +21,12 @@ interface wantData {
 
 
 
-const fetchData = async () => {
+export async function getPostsByUser()  {
   try {
     const response = await axios.get(url);
-    console.log(response.data);
+    console.log(response.data.userId);
   } catch (error) {
-    console.error("Erorr message");
+    throw new Error ("Error message")
   }
 };
+
