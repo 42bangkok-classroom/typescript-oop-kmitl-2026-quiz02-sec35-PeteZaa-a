@@ -23,10 +23,9 @@ export async function getEdgePosts() {
     return result
     
   } catch (error) {
-    throw new Error ("Errorrrrrrrr")
-  }
+    throw error
 
 
 }
-
+}
 getEdgePosts()
